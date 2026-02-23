@@ -1,0 +1,81 @@
+/*! MODO ESCURO */
+:root body.dark-mode {
+  --bg-primary: rgb(20, 21, 26);
+  --bg-secondary: rgb(36, 39, 49);
+  --bg-hover: var(--color-primary-700);
+  --surface: rgb(30, 31, 38);
+  --base-text: #fff;
+  --white-text: #202020;
+}
+
+/** Botões */
+.step-button-prev:hover {background-color: var(--bg-hover) !important; border-color: var(--bg-hover) !important; color: var(--color-primary-700) !important}
+
+/** Base */
+body.dark-mode {color: var(--base-text); background-color: var(--surface);}
+body.dark-mode .main {background-color: var(--surface); }
+body.dark-mode .sidebar {background-color: var(--bg-primary);}
+body.dark-mode .step-button-background {background-color: var(--surface);border-color:  var(--neutral-500);}
+body.dark-mode .step-button-background button {color: var(--base-text);}
+body.dark-mode .sidebar-menu li.active, body.dark-mode .sidebar li:hover:not(.active) {background-color: var(--bg-hover); color: var(--base-text);}
+body.dark-mode .sidebar-menu ul li.active .sidebar-icons, body.dark-mode .sidebar-settings span {color: var(--base-text)}
+body.dark-mode .base-form {background-color: var(--bg-secondary); color: var(--base-text); border-color: var(--bg-secondary);}
+body.dark-mode .horizontal-diviser,.vertical-diviser {background-color: var(--neutral-500)}
+body.dark-mode .yes-no-buttons button {background-color: var(--color-primary-500); border-color: var(--color-primary-700); color: var(--base-text);}
+body.dark-mode .yes-no-buttons button.selected {background-color: var(--color-primary-700); border-color: var(--color-primary-700); }
+
+/** Apresentação */
+body.dark-mode .ppt-content {background-color: var(--bg-secondary); color: var(--base-text)}
+
+/** Objetivos */
+body.dark-mode .base-card {background-color: var(--bg-secondary); border: 1px solid var(--bg-secondary)}
+body.dark-mode .base-card:hover {background-color: rgba(var(--color-primary), 0.05); border-color: rgb(var(--color-primary))}
+body.dark-mode .base-card.selected {background-color: rgba(var(--color-primary), 0.2); border-color: rgb(var(--color-primary))}
+
+/** Coleta de Dados */
+body.dark-mode .collection-nav {background-color: var(--bg-primary); color: var(--base-text); border-color: var(--bg-secondary)}
+body.dark-mode .collection-nav ul li{border-color: var(--bg-hover);}
+body.dark-mode .collection-nav ul li.active{background-color: var(--bg-hover); border-color: var(--color-primary-500);}
+
+/** Orçamento */
+body.dark-mode .orcamento-table {border: none}
+body.dark-mode .orcamento-table-total {background-color: var(--color-primary-500); color: var(--base-text)}
+body.dark-mode .orcamento-table-subtotal {background-color: var(--color-primary-400); color: var(--white-text);}
+body.dark-mode .orcamento-table-item {border-bottom: 1px solid var(--neutral-500)}
+body.dark-mode .orcamento-table small {color: var(--neutral-400)}
+
+/** RESUMO */
+/* Reserva de emergência */
+body.dark-mode .reserva-emergencia-sub {color: var(--base-text)}
+
+/** Projeção */
+body.dark-mode .projecao-informacoes-item {background-color: var(--surface); border-color: var(--surface); color: var(--base-text)}
+
+/** Proposta */
+body.dark-mode .proposal-investimento-valores {color: var(--base-text);}
+body.dark-mode .proposal-investimento-opcao {background-color: var(--bg-secondary); border-color: var(--bg-secondary)}
+body.dark-mode .proposal-investimento-opcao:hover {border-color: rgb(var(--color-primary))}
+body.dark-mode .proposal-investimento-opcao.selecionado {background-color: rgba(var(--color-primary), 0.2); border-color: rgb(var(--color-primary))}
+body.dark-mode .section-title h2,
+body.dark-mode label,
+body.dark-mode input,
+body.dark-mode select {color: var(--base-text)}
+body.dark-mode input[type="text"],
+body.dark-mode input[type="number"],
+body.dark-mode input[type="date"],
+body.dark-mode select {background-color: #1a1a1a; border-color: var(--bg-secondary); color: var(--base-text)}
+body.dark-mode .grid-entregaveis div,
+body.dark-mode .grid-roteiro div,
+body.dark-mode .roteiro-lifeplan div {background-color: var(--bg-secondary); color: var(--base-text); box-shadow: 0 0px 6px rgba(255, 255, 255, 0.1)}
+
+/** Tela Final*/
+body.dark-mode .tela-final .agradecimentos-finais {background-color: var(--bg-secondary); color: var(--base-text); box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4)}
+body.dark-mode .tela-final small {color: var(--base-text)}
+body.dark-mode .tela-final button {background-color: rgba(var(--color-primary), 1); color: white}
+body.dark-mode .tela-final button:hover {background-color: var(--second-color)}
+
+/** Botão de modo escuro */
+.toggle-darkmode-btn {bottom: 20px; right: 20px; background: rgba(var(--color-primary),1);  padding: 10px 15px; border-radius: 8px; border: none; cursor: pointer; z-index: 9999}
+body.dark-mode .toggle-darkmode-btn {background: #0f4d3a}
+body.dark-mode .custom-checkbox {background-color: #333; border-color: var(--base-text)}
+body.dark-mode .checkbox-premissas-projecao input[type="checkbox"]:checked + .custom-checkbox {background-color: rgba(var(--color-primary), 1); border-color: rgba(var(--color-primary), 1)}

@@ -1,0 +1,150 @@
+/* ==================== DISPOSITIVOS GRANDES (1200px+) ==================== */
+@media (min-width: 1200px) {
+  /* Ajustes específicos para telas muito grandes */
+}
+
+/* ==================== TABLETS E NOTEBOOKS (992px - 1199px) ==================== */
+@media (max-width: 1199px) {
+ /* editar */
+}
+
+/* ==================== TABLETS (768px - 991px) ==================== */
+@media (max-width: 991px) {
+  .sidebar-menu span:not(.sidebar-icons) {
+    display: none;
+  }
+  
+  .grid-4x2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .base-form-body-range {
+    flex-direction: column;
+  }
+
+  .ppt-content {
+    width: 90% !important;
+    max-width: 90vw !important;
+    padding: 10px;
+  }
+  .ppt-background {
+    padding: 10px;
+  }
+}
+
+/* ==================== CELULARES GRANDES (576px - 767px) ==================== */
+@media (max-width: 767px) { 
+  .container {
+    width: 100% !important;
+    height: 100% !important;
+  }
+
+  .main {
+    width: 100% !important;
+    height: 100%  !important;
+    padding: 20px; 
+    padding-bottom: 70px;
+  }
+  
+  .sidebar {
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    position: fixed;
+    z-index: 1000;
+    width: 250px;
+  }
+  
+  .step-button-background {
+    margin-left: 20px;
+    margin-right: 20px;
+    width: calc(100vw - 40px);
+  }
+
+  .sidebar.active {
+    transform: translateX(0);
+  }
+
+  .grid-4x2 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .grid-entregaveis,
+  .grid-roteiro {
+    grid-template-columns: 1fr;
+  }
+
+ .projecao-segundaParte-range {gap: 20px;flex-direction: column;}
+}
+
+/* ==================== CELULARES PEQUENOS (até 575px) ==================== */
+@media (max-width: 575px) {
+  .ppt-content {
+    width: 95%;
+  }
+  
+  .video-container iframe {
+    height: 250px;
+  }
+  
+  .projecao-informacoes-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  /* Metodologia e Orçamento - Responsive */
+  .metodologia-secao,
+  .orcamento-atual-secao {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .metodologia-texto {
+    padding-right: 0;
+  }
+
+  .orcamento-texto {
+    padding-left: 0;
+  }
+
+  .metodologia-grafico,
+  .orcamento-grafico {
+    flex: 1;
+    width: 100%;
+  }
+}
+
+.menu-toggle {
+  cursor: pointer;
+  display: none;
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  z-index: 1100;
+  background-color: rgba(var(--main-color), 0.5);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: var(--fs-xl);
+  border-radius: 5px;
+}
+
+.sidebar-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 900;
+}
+
+@media (max-width: 991px) {
+  .menu-toggle {
+    display: block;
+  }
+  
+  .sidebar-overlay.active {
+    display: block;
+  }
+}

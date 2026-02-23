@@ -1,0 +1,2384 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Roteiro de Execução</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/estilo.css" />
+    <link rel="stylesheet" href="styles/dark-mode.css" />
+    <link rel="stylesheet" href="styles/print.css" />
+    <link rel="stylesheet" href="styles/responsivo.css" media="screen" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="imgs/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="imgs/favicon.svg" />
+    <link rel="shortcut icon" href="imgs/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="imgs/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Roteiro" />
+    <link rel="manifest" href="imgs/site.webmanifest" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="sidebar">
+        <img src="imgs/logo.png" alt="Logo" class="sidebar-logo" />
+
+        <div class="night-mode-switch">
+          <div><span class="google-icons sidebar-icons">light_mode</span></div>
+          <div>
+            <label class="switch">
+              <input type="checkbox" id="toggleDarkMode" />
+              <span class="slider"></span>
+            </label>
+          </div>
+          <div><span class="google-icons sidebar-icons">dark_mode</span></div>
+        </div>
+
+        <nav class="sidebar-menu">
+          <ul>
+            <li data-step="0" class="active"><span class="google-icons sidebar-icons">co_present</span>Apresentação</li>
+            <li data-step="2"><span class="google-icons sidebar-icons">target</span>Objetivos</li>
+            <li><span class="google-icons sidebar-icons">assignment</span>Coleta de Dados</li>
+            <li data-step="8"><span class="google-icons sidebar-icons">handshake</span>Proposta de Trabalho</li>
+          </ul>
+        </nav>
+
+        <div class="sidebar-settings">
+          <div class="horizontal-diviser"></div>
+          <div class="sidebar-settings-item">
+            <span class="google-icons sidebar-icons">settings</span>
+          </div>
+        </div>
+      </div>
+      <button class="menu-toggle">☰</button>
+
+      <main>
+        <!-- Apresentação -->
+        <section class="step naoImprimir" id="step-0">
+          <div class="section-title">
+            <h4>Apresentação</h4>
+            <p id="intro-text">Entenda o modelo mais bem sucedido do mundo, agora no Brasil!</p>
+          </div>
+          <div class="section-body">
+            <div class="colored-background">
+              <img src="imgs/roteiro.png" alt="Roteiro de Execução" class="img-roteiro" />
+            </div>
+          </div>
+        </section>
+
+        <!-- Apresentação: PPT -->        
+        <section class="step hidden naoImprimir" id="step-1">
+          <div class="section-title">
+            <h4>Apresentação</h4>
+            <p id="intro-text">Entenda o modelo mais bem sucedido do mundo, agora no Brasil!</p>
+          </div>
+
+          <div class="section-body">
+            <div class="colored-background">
+              <div class="ppt-play">
+                <span class="google-icons">play_circle</span>
+              </div>
+            </div>
+
+            <div id="initialppt-box" class="ppt-box hidden">
+              <div class="ppt-content">
+                <div class="ppt-background">
+                  <p id="pptinitial-close" class="ppt-close"><span class="google-icons">close</span></p>
+                  <iframe src="https://1drv.ms/p/c/6e42b2a3ecc04b85/IQSqAv5mxLfTSa_aSNBJA_7jAZgDCkROV0lRFcHUWKobpHs" class="ppt-embed" frameborder="0" allowfullscreen allow="fullscreen"></iframe>
+                  <p id="pptinitial-fullscreen" class="ppt-fullscreen"><span class="google-icons">aspect_ratio</span>TELA CHEIA</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Objetivos -->
+        <section class="step hidden naoImprimir" id="step-2">
+          <div class="section-title">
+            <h4>Objetivos</h4>
+            <p id="goals-intro">Selecione abaixo os objetivos do seu cliente:</p>
+          </div>
+          <div class="section-body">
+            <div class="grid-4x2" id="goals-grid"></div>
+          </div>
+        </section>
+
+        <!-- Objetivos: Formulário -->
+        <section class="step hidden naoImprimir" id="step-3">
+          <div class="section-title">
+            <h4>Objetivos</h4>
+            <p id="goals-form-intro">Agora, preencha os campos de informações sobre cada objetivo selecionado.</p>
+          </div>
+
+          <div id="forms-container" class="section-body">
+            <div class="base-form goal-form hidden" data-goal="imovel" form-name="goal-imovel">
+              <div class="base-form-header" data-toggle-target="goal-imovel">
+                <span class="google-icons base-form-icon">apartment</span>
+                <span class="base-form-title">Imóveis</span>
+                <span class="google-icons base-form-item">expand_less</span>
+              </div>
+
+                <div class="base-form-body" id="goal-imovel">
+                <div class="base-form-body-range">
+                  <div>
+                    <label for="goal-imovel-pergunta">Por que escolheu esse objetivo?</label>
+                    <input type="text" id="goal-imovel-pergunta" placeholder="Descreva o motivo..." name="goal-imovel-pergunta"/>
+                  </div>
+                </div>
+                <div class="horizontal-diviser"></div>
+                <div class="base-form-body-range">
+                  <div>
+                    <label for="goal-imovel-tipoimovel">Qual o tipo de imóvel?</label>
+                    <select id="goal-imovel-tipoimovel" name="goal-imovel-tipoimovel">
+                      <option value="" selected disabled>Selecione uma opção</option>
+                      <option value="apartamento">Apartamento</option>
+                      <option value="casa">Casa</option>
+                      <option value="terreno">Terreno</option>
+                      <option value="comercial">Comercial</option>
+                      <option value="outro">Outro</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label for="goal-imovel-data">Quando pretende realizar esse objetivo?</label>
+                    <input type="date" id="goal-imovel-data" name="goal-imovel-data" />
+                  </div>
+                  <div>
+                    <label for="goal-imovel-value">Qual o valor estimado do imóvel?</label>
+                    <input type="text" id="goal-imovel-value" placeholder="R$" inputmode="decimal" field-format="number" name="goal-imovel-value"/>
+                  </div>
+                </div>
+                <div class="horizontal-diviser"></div>
+                <div class="base-form-body-range">
+                  <div>
+                    <label for="goal-imovel-obs">Observações</label>
+                    <input type="text" id="goal-imovel-obs" placeholder="Alguma observação?" name="goal-imovel-obs"/>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="base-form goal-form hidden" data-goal="veiculo" form-name="goal-veiculo">
+              <div class="base-form-header" data-toggle-target="goal-veiculo">
+                <span class="google-icons base-form-icon">directions_car</span>
+                <span class="base-form-title">Veículos</span>
+                <span class="google-icons base-form-item">expand_less</span>
+              </div>
+
+              <div class="base-form-body" id="goal-veiculo">
+                <div class="base-form-body-range">
+                  <div>
+                    <label for="goal-veiculo-pergunta">Por que escolheu esse objetivo?</label>
+                    <input type="text" id="goal-veiculo-pergunta" placeholder="Descreva o motivo..." name="goal-veiculo-pergunta"/>
+                  </div>
+                </div>
+                <div class="horizontal-diviser"></div>
+                <div class="base-form-body-range">
+                  <div>
+                    <label for="goal-veiculo-tipoveiculo">Qual o tipo de veículo?</label>
+                    <select id="goal-veiculo-tipoveiculo" name="goal-imovel-tipoveiculo">
+                      <option value="" selected disabled>Selecione uma opção</option>
+                      <option value="automovel">Automóvel</option>
+                      <option value="moto">Moto</option>
+                      <option value="caminhonete">Caminhonete</option>
+                      <option value="caminhao">Caminhão</option>
+                      <option value="outro">Outro</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label for="goal-veiculo-data">Quando pretende realizar esse objetivo?</label>
+                    <input type="date" id="goal-veiculo-data" name="goal-veiculo-data" />
+                  </div>
+                  <div>
+                    <label for="goal-veiculo-valor">Qual o valor estimado do veículo?</label>
+                    <input type="text" id="goal-veiculo-valor" placeholder="R$" field-format="number" name="goal-veiculo-valor"/>
+                  </div>
+                </div>
+                <div class="horizontal-diviser"></div>
+                <div class="base-form-body-range">
+                  <div>
+                    <label for="goal-veiculo-obs">Observações</label>
+                    <input type="text" id="goal-veiculo-obs" placeholder="Alguma observação?" name="goal-veiculo-obs"/>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="base-form goal-form hidden" data-goal="profissional" form-name="goal-profissional">
+              <div class="base-form-header" data-toggle-target="goal-profissional">
+                <span class="google-icons base-form-icon">work</span>
+                <span class="base-form-title">Profissional</span>
+                <span class="google-icons base-form-item">expand_less</span>
+              </div>
+
+              <div class="base-form-body" id="goal-profissional">
+                <div class="base-form-body-range">
+                  <div>
+                    <label for="goal-profissional-pergunta">Por que escolheu esse objetivo?</label>
+                    <input type="text" id="goal-profissional-pergunta" placeholder="Descreva o motivo..." name="goal-profissional-pergunta"/>
+                  </div>
+                </div>
+                <div class="horizontal-diviser"></div>
+                <div class="base-form-body-range">
+                  <div>
+                    <label for="goal-profissional-data">Quando pretende realizar esse objetivo?</label>
+                    <input type="date" id="goal-profissional-data" name="goal-profissional-data" />
+                  </div>
+                  <div>
+                    <label for="goal-profissional-valor">Qual o valor estimado?</label>              
+                    <input type="text" id="goal-profissional-valor" placeholder="R$" field-format="number" name="goal-profissional-valor"/>
+                  </div>
+                </div>
+                <div class="horizontal-diviser"></div>
+                <div class="base-form-body-range">
+                  <div>
+                    <label for="goal-profissional-obs">Observações</label>
+                    <input type="text" id="goal-profissional-obs" placeholder="Alguma observação?" name="goal-profissional-obs"/>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="base-form goal-form hidden" data-goal="viagens" form-name="goal-viagens"> 
+              <div class="base-form-header" data-toggle-target="goal-viagens">
+                <span class="google-icons base-form-icon">flight</span>
+                <span class="base-form-title">Viagens</span>
+                <span class="google-icons base-form-item">expand_less</span>
+              </div>
+              <div class="base-form-body" id="goal-viagens">
+                <div class="base-form-body-range">
+                  <div>
+                    <label for="goal-viagens-pergunta">Por que escolheu esse objetivo?</label>
+                    <input type="text" id="goal-viagens-pergunta" placeholder="Descreva o motivo..." name="goal-viagens-pergunta"/>
+                  </div>
+                </div>
+                <div class="horizontal-diviser"></div>
+                <div class="base-form-body-range">
+                  <div>
+                    <label for="goal-viagens-tipoviagem">Que tipo de viagem?</label>
+                    <select id="goal-viagens-tipoviagem" name="goal-viagens-tipoviagem">
+                      <option value="" selected disabled>Selecione uma opção</option>
+                      <option value="lazer">Lazer</option>
+                      <option value="negocios">Negócios</option>
+                      <option value="intercambio">Intercâmbio</option>
+                      <option value="aventura">Aventura</option>
+                      <option value="cultural">Cultural</option>
+                      <option value="outro">Outro</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label for="goal-viagens-destino">Qual o destino da viagem?</label>
+                    <input type="text" id="goal-viagens-destino" placeholder="Ex: Europa, Brasil, Ásia..." name="goal-viagens-destino"/>
+                  </div>
+                </div>
+                <div class="horizontal-diviser"></div>
+                <div class="base-form-body-range">
+                  <div>
+                    <label for="goal-viagens-data">Quando pretende realizar essa viagem?</label>
+                    <input type="date" id="goal-viagens-data" name="goal-viagens-data" />
+                  </div>
+                  <div>
+                    <label for="goal-viagens-valor">Qual o valor estimado da viagem?</label>
+                    <input type="text" id="goal-viagens-valor" placeholder="R$" field-format="number" name="goal-viagens-valor"/>
+                  </div>
+                </div>
+                <div class="horizontal-diviser"></div>
+                <div class="base-form-body-range">
+                  <div>
+                    <label for="goal-viagens-obs">Observações</label>
+                    <input type="text" id="goal-viagens-obs" placeholder="Alguma observação?" name="goal-viagens-obs"/>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="base-form goal-form hidden" data-goal="casamento" form-name="goal-casamento">
+              <div class="base-form-header" data-toggle-target="goal-casamento">
+                <span class="google-icons base-form-icon">favorite</span>
+                <span class="base-form-title">Casamento</span>
+                <span class="google-icons base-form-item">expand_less</span>
+              </div>
+              <div class="base-form-body" id="goal-casamento">
+                <div class="base-form-body-range">
+                  <div>
+                    <label for="goal-casamento-pergunta">Por que escolheu esse objetivo?</label>
+                    <input type="text" id="goal-casamento-pergunta" placeholder="Descreva o motivo..." name="goal-casamento-pergunta"/>
+                  </div>
+                </div>
+                <div class="horizontal-diviser"></div>
+                <div class="base-form-body-range">
+                  <div>
+                    <label>Onde ocorrerá o casamento?</label>
+                    <select name="goal-casamento-local">
+                      <option value="" selected disabled>Selecione uma opção</option>
+                      <option value="igreja">Igreja</option>
+                      <option value="praia">Praia</option>
+                      <option value="campo">Campo</option>
+                      <option value="civil">Civil</option>
+                      <option value="intima">Íntima</option>
+                      <option value="religiosa">Religiosa</option>
+                      <option value="tematica">Temática</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="horizontal-diviser"></div>
+                <div class="base-form-body-range">
+                  <div>
+                    <label for="goal-casamento-data">Quando pretende se casar?</label>
+                    <input type="date" id="goal-casamento-data" name="goal-casamento-data" />
+                  </div>
+                  <div>
+                    <label for="goal-casamento-valor">Qual o valor estimado do casamento?</label>
+                    <input type="text" id="goal-casamento-valor" placeholder="R$" field-format="number" name="goal-casamento-valor"/>
+                  </div>
+                </div>
+                <div class="horizontal-diviser"></div>
+                <div class="base-form-body-range">
+                  <div>
+                    <label for="goal-casamento-obs">Observações</label>
+                    <input type="text" id="goal-casamento-obs" placeholder="Alguma observação?" name="goal-casamento-obs"/>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="base-form goal-form hidden" data-goal="empreender" form-name="goal-empreender">
+              <div class="base-form-header" data-toggle-target="goal-empreender">
+                <span class="google-icons base-form-icon">lightbulb_2</span>
+                <span class="base-form-title">Empreender</span>
+                <span class="google-icons base-form-item">expand_less</span>
+              </div>
+              <div class="base-form-body" id="goal-empreender">
+                <div class="base-form-body-range">
+                  <div>
+                    <label for="goal-empreender-pergunta">Qual o tipo de negócio?</label>
+                    <input type="text" id="goal-empreender-pergunta" placeholder="Ex: Loja, serviço, produto..." name="goal-empreender-pergunta"/>
+                  </div>
+                </div>
+                <div class="horizontal-diviser"></div>
+                <div class="base-form-body-range">
+                  <div>
+                    <label for="goal-empreender-data">Quando pretende realizar o objetivo?</label>
+                    <input type="date" id="goal-empreender-data" name="goal-empreender-data" />
+                  </div>
+                  <div>
+                    <label for="goal-empreender-valor">Quanto espera investir neste objetivo?</label>
+                    <input type="text" id="goal-empreender-valor" placeholder="R$" field-format="number" name="goal-empreender-valor"/>
+                  </div>
+                </div>
+                <div class="horizontal-diviser"></div>
+                <div class="base-form-body-range">
+                  <div>
+                    <label for="goal-empreender-obs">Observações</label>
+                    <input type="text" id="goal-empreender-obs" placeholder="Alguma observação?" name="goal-empreender-obs"/>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="base-form goal-form hidden" data-goal="dividas" form-name="goal-dividas">
+              <div class="base-form-header" data-toggle-target="goal-dividas">
+                <span class="google-icons base-form-icon">money_off</span>
+                <span class="base-form-title">Sanar dívidas</span>
+                <span class="google-icons base-form-item">expand_less</span>
+              </div>
+              <div class="base-form-body" id="goal-dividas">
+                <div class="base-form-body-range">
+                  <div>
+                    <label for="goal-dividas-pergunta">Por que escolheu este objetivo?</label>
+                    <input type="text" id="goal-dividas-pergunta" placeholder="Descreva o motivo..." name="goal-dividas-pergunta"/>
+                  </div>
+                </div>
+                <div class="horizontal-diviser"></div>
+                <div class="base-form-body-range">
+                  <div>
+                    <label for="goal-dividas-data">Quando pretende quitar as dívidas?</label>
+                    <input type="date" id="goal-dividas-data" name="goal-dividas-data" />
+                  </div>
+                  <div>
+                    <label for="goal-dividas-valor">Qual o valor total das dívidas?</label>
+                    <input type="text" id="goal-dividas-valor" placeholder="R$" field-format="number" name="goal-dividas-valor"/>
+                  </div>
+                </div>
+                <div class="horizontal-diviser"></div>
+                <div class="base-form-body-range">
+                  <div>
+                    <label for="goal-dividas-obs">Observações</label>
+                    <input type="text" id="goal-dividas-obs" placeholder="Alguma observação?" name="goal-dividas-obs"/>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="base-form goal-form hidden" data-goal="outros" form-name="goal-outros">
+              <div class="base-form-header" data-toggle-target="goal-outros">
+                <span class="google-icons base-form-icon">more_horiz</span>
+                <span class="base-form-title">Outros</span>
+                <span class="google-icons base-form-item">expand_less</span>
+              </div>
+              <div class="base-form-body" id="goal-outros">
+                <div class="base-form-body-range">
+                  <div>
+                    <label for="goal-outros-pergunta">Qual o objetivo?</label>
+                    <input type="text" id="goal-outros-pergunta" placeholder="Descreva o objetivo..." name="goal-outros-pergunta"/>
+                  </div>
+                </div>
+                <div class="horizontal-diviser"></div>
+                <div class="base-form-body-range">
+                  <div>
+                    <label for="goal-outros-data">Quando pretende realizar esse objetivo?</label>
+                    <input type="date" id="goal-outros-data" name="goal-outros-data" />
+                  </div>
+                  <div>
+                    <label for="goal-outros-valor">Qual o valor estimado?</label>
+                    <input type="text" id="goal-outros-valor" placeholder="R$" field-format="number" name="goal-outros-valor"/>
+                  </div>
+                </div>
+                <div class="horizontal-diviser"></div>
+                <div class="base-form-body-range">
+                  <div>
+                    <label for="goal-outros-obs">Observações</label>
+                    <input type="text" id="goal-outros-obs" placeholder="Alguma observação?" name="goal-outros-obs"/>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Coleta de dados: Dados Iniciais -->
+        <section class="step hidden naoImprimir" id="step-4">
+          <div class="section-title">
+            <h4>Coleta de Dados</h4>
+            <nav class="collection-nav">
+              <ul>
+                <li class="active"><span class="google-icons collection-nav-icons">person</span>Dados Iniciais</li>
+                <li><span class="google-icons collection-nav-icons">shield</span>Proteções</li>
+                <li><span class="google-icons collection-nav-icons">account_balance</span>Patrimônio</li>
+                <li><span class="google-icons collection-nav-icons">money</span>Orçamento</li>
+              </ul>
+            </nav>
+          </div>
+
+          <div class="section-body">
+            <div class="base-form" form-name="collect-dadosPessoais">
+              <div class="base-form-header" data-toggle-target="collect-dados-dadosPessoaisCasal">
+                <span class="google-icons base-form-icon">group</span>
+                <span class="base-form-title">Dados Pessoais</span>
+                <span class="google-icons base-form-item">expand_less</span>
+              </div>
+
+              <div class="base-form-body" id="collect-dados-dadosPessoaisCasal">
+                <label>Casal?</label>
+                <div class="yes-no-buttons">
+                  <button type="button" data-value="true" data-ocultar-campo="form-casal">Sim</button>
+                  <button type="button" data-value="false" data-ocultar-campo="form-casal">Não</button>
+                </div>
+
+                <div class="horizontal-diviser"></div>
+
+                <div>
+                  <label>Nome Completo</label>
+                  <input type="text" id="collect-dadosPessoais-info3" />
+                </div>
+
+                <div class="base-form-body-range" style="margin-top: 20px">
+                  <div>
+                    <label>Data de Nascimento</label>
+                    <input type="date" id="data_nascimento" />
+                  </div>
+                    <div>
+                      <label for="collect-dadosPessoais-profissao">Qual sua profissão?</label>
+                      <input type="text" id="collect-dadosPessoais-profissao" />
+                    </div>
+                    <div>
+                      <label for="collect-dadosPessoais-modalidade">Qual sua modalidade de trabalho?</label>
+                      <select id="collect-dadosPessoais-modalidade" name="collect-dadosPessoais-modalidade">
+                      <option value="" selected disabled>Selecione uma opção</option>
+                      <option value="clt-regimeEstatutario">CLT/Regime Estatutário</option>
+                      <option value="PJ-empresario">Pessoa Jurídica/Empresário</option>
+                      <option value="autonomo">Autônomo</option>
+                      <option value="aposentado">Aposentado(a)</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="hidden" id="form-casal">
+                  <div class="horizontal-diviser"></div>
+                  <div>
+                    <label for="conjuge-nome">Nome Completo do Cônjuge</label>
+                    <input type="text" id="conjuge-nome" name="conjuge-nome" />
+                  </div>
+                  <div class="base-form-body-range" style="margin-top: 20px">
+                    <div>
+                        <label for="conjuge-data">Data de Nascimento</label>
+                        <input type="date" id="conjuge-data" name="conjuge-data" />
+                    </div>
+                    <div>
+                        <label for="conjuge-profissao">Qual sua profissão?</label>
+                        <input type="text" id="conjuge-profissao" name="conjuge-profissao" />
+                    </div>
+                    <div>
+                        <label for="conjuge-modalidade">Qual sua modalidade de trabalho?</label>
+                        <select id="conjuge-modalidade" name="conjuge-modalidade">
+                        <option value="" selected disabled>Selecione uma opção</option>
+                        <option>CLT/Regime Estatutário</option>
+                        <option>Pessoa Jurídica/Empresário</option>
+                        <option>Autônomo</option>
+                        <option>Aposentado(a)</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="base-form" form-name="collect-orcamento-orcamento">
+              <div class="base-form-header" data-toggle-target="collect-dados-dadosPessoaisFamilia">
+                <span class="google-icons base-form-icon">family_restroom</span>
+                <span class="base-form-title">Família</span>
+                <span class="google-icons base-form-item">expand_less</span>
+              </div>
+
+              <div class="base-form-body" id="collect-dados-dadosPessoaisFamilia">
+                <div>
+                  <label>Você possui filhos ou dependentes?</label>
+                  <div class="yes-no-buttons">
+                    <button type="button" data-value="true" data-ocultar-campo="form-filhosDependentes">Sim</button>
+                    <button type="button" data-value="false" data-ocultar-campo="form-filhosDependentes">Não</button>
+                  </div>
+                </div>
+
+                <div class="hidden" id="form-filhosDependentes">
+                  <button type="button" id="add-dependent-btn">+ Adicionar</button>
+                  <div id="dependents-container"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="base-form">
+              <div class="base-form-header" data-toggle-target="collect-dados-impostoRenda">
+                <span class="google-icons base-form-icon">receipt_long</span>
+                <span class="base-form-title">Imposto de Renda</span>
+                <span class="google-icons base-form-item">expand_less</span>
+              </div>
+
+              <div class="base-form-body" id="collect-dados-impostoRenda">
+                <div class="base-form-body-range">
+                  <div>
+                    <label for="ir-modalidade">Você declara IR qual modalidade?</label>
+                    <select id="ir-modalidade" name="ir-modalidade">
+                      <option value="" selected="" disabled="">Selecione uma opção</option>
+                      <option value="simplificada">Simplificada</option>
+                      <option value="completa">Completa</option>
+                      <option value="isento">Sou isento(a)</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label for="ir-restituicao">Restituiu IR na declaração do ano anterior?</label>
+                    <select id="ir-restituicao" name="ir-restituicao">
+                      <option value="" selected="" disabled="">Selecione uma opção</option>
+                      <option value="sim">Sim</option>
+                      <option value="nao">Não</option>
+                      <option value="isento">Sou isento(a)</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label for="ir-valor-restituido">Qual foi o valor restituído (aprox.)?</label>
+                    <input type="text" id="ir-valor-restituido" name="ir-valor-restituido" placeholder="R$" inputmode="decimal" field-format="number" data-raw-value="0" />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="base-form">
+              <div class="base-form-header" data-toggle-target="collect-dados-aposentadoria">
+                <span class="google-icons base-form-icon">elderly</span>
+                <span class="base-form-title">Aposentadoria</span>
+                <span class="google-icons base-form-item">expand_less</span>
+              </div>
+
+              <div class="base-form-body" id="collect-dados-aposentadoria">
+                <div class="base-form-body-range">
+                  <div>
+                    <label for="aposentadoria-motivo">Por que escolheu esse objetivo?</label>
+                    <input type="text" id="aposentadoria-motivo" placeholder="Descreva o motivo..."/>
+                  </div>
+                </div>
+                <div class="horizontal-diviser"></div>
+                <div class="base-form-body-range">
+                  <div>
+                    <label for="aposentadoria-idade">Com quantos anos pretende se aposentar?</label>
+                    <input type="number" min="0" placeholder="Ex: 60" id="aposentadoria-idade" name="aposentadoria-idade"/>
+                  </div>
+                  <div>
+                    <label for="aposentadoria-aporte">Quanto pretende investir mensalmente?</label>
+                    <input type="text" placeholder="R$" inputmode="decimal" field-format="number" id="aposentadoria-aporte" name="aposentadoria-aporte"/>
+                  </div>
+                </div>
+                <div class="horizontal-diviser"></div>
+                <div class="base-form-body-range">
+                  <div>
+                    <label for="aposentadoria-obs">Observações</label>
+                    <input type="text" placeholder="Alguma observação?" id="aposentadoria-obs" name="aposentadoria-obs"/>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Coleta de dados: Proteções -->
+        <section class="step hidden naoImprimir" id="step-5">
+          <div class="section-title">
+            <h4>Coleta de Dados</h4>
+            <nav class="collection-nav">
+              <ul>
+                <li><span class="google-icons collection-nav-icons">person</span>Dados Iniciais</li>
+                <li class="active"><span class="google-icons collection-nav-icons">shield</span>Proteções</li>
+                <li><span class="google-icons collection-nav-icons">account_balance</span>Patrimônio</li>
+                <li><span class="google-icons collection-nav-icons">money</span>Orçamento</li>
+              </ul>
+            </nav>
+          </div>
+
+          <div class="section-body">
+            <div class="base-form">
+              <div class="base-form-header" data-toggle-target="collect-protecoes-saude">
+                <span class="google-icons base-form-icon">local_hospital</span>
+                <span class="base-form-title">Plano de Saúde</span>
+                <span class="google-icons base-form-item">expand_less</span>
+              </div>
+
+              <div class="base-form-body" id="collect-protecoes-saude">
+                <label>Você(s) possue(m) plano de saúde?</label>
+                <div class="yes-no-buttons">
+                  <button type="button" data-value="true" data-ocultar-campo="form-planodesaude">Sim</button>
+                  <button type="button" data-value="false" data-ocultar-campo="form-planodesaude">Não</button>
+                </div>
+
+                <div class="hidden" id="form-planodesaude">
+                  <div class="horizontal-diviser"></div>
+                  <div class="base-form-body-range">
+                    <div>
+                      <label for="saude-plano">Qual seu plano?</label>
+                      <input type="text" id="saude-plano" name="saude-plano"/>
+                    </div>
+                    <div>
+                      <label for="saude-modalidade">Modalidade de Contratação</label>
+                      <select id="saude-modalidade" name="saude-modalidade">
+                        <option value="" selected disabled>Selecione uma opção</option>
+                        <option value="individual">Individual</option>
+                        <option value="familiar">Familiar</option>
+                        <option value="coletivo">Coletivo</option>
+                        <option value="empresarial">Empresarial</option>
+                      </select>
+                    </div>
+                    <div>
+                      <label for="saude-valor">Qual o valor mensal?</label>
+                      <input type="text" id="saude-valor" name="saude-valor" placeholder="R$" inputmode="decimal" field-format="number"/>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="base-form">
+              <div class="base-form-header" data-toggle-target="collect-protecoes-vida">
+                <span class="google-icons base-form-icon" >health_and_safety</span>
+                <span class="base-form-title">Seguro de Vida</span>
+                <span class="google-icons base-form-item">expand_less</span>
+              </div>
+              <div class="base-form-body" id="collect-protecoes-vida">
+                <label>Você(s) possue(m) seguro de vida?</label>
+                <div class="yes-no-buttons">
+                  <button type="button" data-value="true" data-ocultar-campo="form-protecoesvida">Sim</button>
+                  <button type="button" data-value="false" data-ocultar-campo="form-protecoesvida">Não</button>
+                </div>
+
+                <div class="hidden" id="form-protecoesvida">
+                  <div class="horizontal-diviser"></div>
+                  <div class="base-form-body-range">
+                    <div>
+                      <label for="vida-plano">Qual seu plano?</label>
+                      <input type="text" id="vida-plano" name="vida-plano" placeholder="vida/doença/acidente/profissional"/>
+                    </div>
+                    <div>
+                      <label for="vida-premio">Qual o prêmio?</label>
+                      <input type="text" id="vida-premio" name="vida-premio" placeholder="R$" inputmode="decimal" field-format="number"/>
+                    </div>
+                    <div>
+                      <label for="vida-cobertura">Cobertura</label>
+                      <input type="date" id="vida-cobertura" name="vida-cobertura"/>
+                    </div>
+                  </div>
+                  <div class="horizontal-diviser"></div>
+                  <div>
+                    <label for="vida-obs">Observações</label>
+                    <input type="text" id="vida-obs" name="vida-obs" placeholder="Alguma observação?"/>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="base-form">
+              <div class="base-form-header" data-toggle-target="collect-protecoes-patrimonio" >
+                <span class="google-icons base-form-icon">shield_with_house</span>
+                <span class="base-form-title">Seguro Patrimonial</span>
+                <span class="google-icons base-form-item">expand_less</span>
+              </div>
+
+              <div class="base-form-body" id="collect-protecoes-patrimonio">
+                <label>Você(s) possue(m) seguro patrimonial?</label>
+                <div class="yes-no-buttons">
+                  <button type="button" data-value="true" data-ocultar-campo="form-patrimonio">Sim</button>
+                  <button type="button" data-value="false" data-ocultar-campo="form-patrimonio">Não</button>
+                </div>
+
+                <div class="hidden" id="form-patrimonio">
+                  <div class="horizontal-diviser"></div>
+                  <div class="base-form-body-range">
+                    <div>
+                      <label for="patrimonio-plano">Qual a seguradora?</label>
+                      <input type="text" id="patrimonio-plano" name="patrimonio-plano"/>
+                    </div>
+                    <div>
+                      <label for="patrimonio-premio">Qual o prêmio?</label>
+                      <input type="text" id="patrimonio-premio" name="patrimonio-premio" placeholder="R$" inputmode="decimal" field-format="number"/>
+                    </div>
+                    <div>
+                      <label for="patrimonio-cobertura">Cobertura</label>
+                      <input type="date" id="patrimonio-cobertura" name="patrimonio-cobertura"/>
+                    </div>
+                  </div>
+                  <div class="horizontal-diviser"></div>
+                  <div>
+                    <label for="patrimonio-obs">Observações</label>
+                    <input type="text" id="patrimonio-obs" name="patrimonio-obs" placeholder="Alguma observação?"/>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="base-form">
+              <div class="base-form-header" data-toggle-target="collect-protecoes-veicular">
+                <span class="google-icons base-form-icon">directions_car</span>
+                <span class="base-form-title">Seguro Veicular</span>
+                <span class="google-icons base-form-item">expand_less</span>
+              </div>
+              <div class="base-form-body" id="collect-protecoes-veicular">
+                <label>Você(s) possue(m) seguro veicular?</label>
+                <div class="yes-no-buttons">
+                  <button type="button" data-value="true" data-ocultar-campo="form-veicular">Sim</button>
+                  <button type="button" data-value="false" data-ocultar-campo="form-veicular">Não</button>
+                </div>
+
+                <div class="hidden" id="form-veicular">
+                  <div class="horizontal-diviser"></div>
+                  <div class="base-form-body-range">
+                    <div>
+                      <label for="veicular-plano">Qual a seguradora?</label>
+                      <input type="text" id="veicular-plano" name="veicular-plano"/>
+                    </div>
+                    <div>
+                      <label for="veicular-premio">Qual o prêmio?</label>
+                      <input type="text" id="veicular-premio" name="veicular-premio" placeholder="R$" inputmode="decimal" field-format="number"/>
+                    </div>
+                    <div>
+                      <label for="veicular-cobertura">Cobertura</label>
+                      <input type="date" id="veicular-cobertura" name="veicular-cobertura"/>
+                    </div>
+                  </div>
+                  <div class="horizontal-diviser"></div>
+                  <div>
+                    <label for="veicular-obs">Observações</label>
+                    <input type="text" id="veicular-obs" name="veicular-obs" placeholder="Alguma observação?"/>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="base-form">
+              <div class="base-form-header" data-toggle-target="collect-protecoes-previdencia">
+                <span class="google-icons base-form-icon">wallet</span>
+                <span class="base-form-title">Previdência</span>
+                <span class="google-icons base-form-item">expand_less</span>
+              </div>
+              <div class="base-form-body" id="collect-protecoes-previdencia">
+                <label>Você(s) possue(m) previdência complementar?</label>
+                <div class="yes-no-buttons">
+                  <button type="button" data-value="true" data-ocultar-campo="form-previdencia">Sim</button>
+                  <button type="button" data-value="false" data-ocultar-campo="form-previdencia">Não</button>
+                </div>
+
+                <div class="hidden" id="form-previdencia">
+                  <div class="horizontal-diviser"></div>
+
+                  <div>
+                    <label for="previdencia-plano">Sua previdência é PGBL ou VGBL?</label>
+                    <select id="previdencia-plano" name="previdencia-plano">
+                      <option value="" selected disabled>Selecione uma opção</option>
+                      <option value="pgbl">PGBL (Plano Gerador de Benefício Livre)</option>
+                      <option value="vgbl">VGBL (Vida Gerador de Benefício Livre)</option>
+                      <option value="nao-sei">Não sei</option>
+                    </select>
+                  </div>
+
+                  <div class="horizontal-diviser"></div>
+
+                  <div class="base-form-body-range">
+                    <div>
+                      <label for="previdencia-valor">Qual valor já investido?</label>
+                      <input type="text" id="previdencia-valor" name="previdencia-valor" placeholder="R$" inputmode="decimal" field-format="number"/>
+                    </div>
+
+                    <div>
+                      <label for="previdencia-aportemensal">Quanto você aporta mensalmente?</label>
+                      <input type="text" id="previdencia-aportemensal" name="previdencia-aportemensal" placeholder="R$" inputmode="decimal" field-format="number"/>
+                    </div>
+                  </div>
+                  <div class="horizontal-diviser"></div>
+                  <div>
+                    <label for="previdencia-obs">Observações</label>
+                    <input type="text" id="previdencia-obs" name="previdencia-obs" placeholder="Alguma observação?"/>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="base-form">
+              <div class="base-form-header" data-toggle-target="collect-protecoes-outrasprotecoes">
+                <span class="google-icons base-form-icon">more_horiz</span>
+                <span class="base-form-title">Outras Proteções</span>
+                <span class="google-icons base-form-item">expand_less</span>
+              </div>
+              <div class="base-form-body" id="collect-protecoes-outrasprotecoes">
+                <label>Você(s) possue(m) outro tipo de seguro?</label>
+                <div class="yes-no-buttons">
+                  <button type="button" data-value="true" data-ocultar-campo="form-outrasprotecoes">Sim</button>
+                  <button type="button" data-value="false" data-ocultar-campo="form-outrasprotecoes">Não</button>
+                </div>
+
+                <div class="hidden" id="form-outrasprotecoes">
+                  <div class="horizontal-diviser"></div>
+                  <div class="base-form-body-range">
+                    <div>
+                      <label for="outrasprotecoes-plano">Qual tipo de seguro e seguradora?</label>
+                      <input type="text" id="outrasprotecoes-plano" name="outrasprotecoes-plano"/>
+                    </div>
+                    <div>
+                      <label for="outrasprotecoes-premio">Qual o prêmio?</label>
+                      <input type="text" id="outrasprotecoes-premio" name="outrasprotecoes-premio" placeholder="R$" inputmode="decimal" field-format="number"/>
+                    </div>
+                    <div>
+                      <label for="outrasprotecoes-cobertura">Cobertura</label>
+                      <input type="date" id="outrasprotecoes-cobertura" name="outrasprotecoes-cobertura"/>
+                    </div>
+                  </div>
+                  <div class="horizontal-diviser"></div>
+                  <div>
+                    <label for="outrasprotecoes-obs">Observações</label>
+                    <input type="text" id="outrasprotecoes-obs" name="outrasprotecoes-obs" placeholder="Alguma observação?"/>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Coleta de dados: Patrimônio -->
+        <section class="step hidden naoImprimir" id="step-6">
+          <div class="section-title">
+            <h4>Coleta de Dados</h4>
+            <nav class="collection-nav">
+              <ul>
+                <li><span class="google-icons collection-nav-icons">person</span>Dados Iniciais</li>
+                <li><span class="google-icons collection-nav-icons">shield</span>Proteções</li>
+                <li class="active"><span class="google-icons collection-nav-icons">account_balance</span>Patrimônio</li>
+                <li><span class="google-icons collection-nav-icons">money</span>Orçamento</li>
+              </ul>
+            </nav>
+          </div>
+
+          <div class="section-body">
+            <h4>Ativos</h4>
+            <br />
+            <div class="base-form">
+              <div class="base-form-header" data-toggle-target="collect-patrimonio-imoveis">
+                <span class="google-icons base-form-icon">home</span>
+                <span class="base-form-title">Imóveis</span>
+                <span class="google-icons base-form-item">expand_less</span>
+              </div>
+              <div class="base-form-body" id="collect-patrimonio-imoveis">
+                <label>Você(s) possue(m) algum imóvel?</label>
+                <div class="yes-no-buttons">
+                  <button type="button" data-value="true" data-ocultar-campo="form-imoveis">Sim</button>
+                  <button type="button" data-value="false" data-ocultar-campo="form-imoveis">Não</button>
+                </div>
+
+                <div class="hidden" id="form-imoveis">
+                  <button type="button" id="add-property-btn">+ Adicionar Imóvel</button>
+                  <div id="properties-container"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="base-form">
+              <div class="base-form-header" data-toggle-target="collect-patrimonio-veiculos">
+                <span class="google-icons base-form-icon">directions_car</span>
+                <span class="base-form-title">Veículos</span>
+                <span class="google-icons base-form-item">expand_less</span>
+              </div>
+              <div class="base-form-body" id="collect-patrimonio-veiculos">
+                <label>Você(s) possue(m) algum veículo?</label>
+                <div class="yes-no-buttons">
+                  <button type="button" data-value="true" data-ocultar-campo="form-veiculos">Sim</button>
+                  <button type="button" data-value="false" data-ocultar-campo="form-veiculos">Não</button>
+                </div>
+
+                <div class="hidden" id="form-veiculos">
+                  <button type="button" id="add-vehicle-btn">+ Adicionar Veículo</button>
+                  <div id="vehicle-container"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="base-form">
+              <div class="base-form-header" data-toggle-target="collect-dados-INSS">
+                <span class="google-icons base-form-icon">elderly</span>
+                <span class="base-form-title">INSS</span>
+                <span class="google-icons base-form-item">expand_less</span>
+              </div>
+
+              <div class="base-form-body" id="collect-dados-INSS">
+                <label>Você contribui para o INSS?</label>
+                <div class="yes-no-buttons">
+                  <button type="button" data-value="true" data-ocultar-campo="form-inss">Sim</button>
+                  <button type="button" data-value="false" data-ocultar-campo="form-inss">Não</button>
+                </div>
+
+                <div class="hidden" id="form-inss">
+                  <div class="horizontal-diviser"></div>
+                  <div class="base-form-body-range">
+                    <div>
+                      <label>Quanto? (Por mês)</label>
+                      <input type="text" placeholder="R$" field-format="number"/>
+                    </div>
+
+                    <div>
+                      <label>Você acha que o INSS vai garantir a aposentadoria que você merece?</label>
+                      <div class="yes-no-buttons">
+                        <button type="button" data-value="true">Sim</button>
+                        <button type="button" data-value="false">Não</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="horizontal-diviser"></div>
+                <label>Quanto de renda passiva você deseja ter ao parar de trabalhar?</label>
+                <input type="text" placeholder="R$" field-format="number" />
+              </div>
+            </div>
+
+            <div class="base-form">
+              <div class="base-form-header" data-toggle-target="collect-patrimonio-investimentos">
+                <span class="google-icons base-form-icon">finance</span>
+                <span class="base-form-title">Investimentos</span>
+                <span class="google-icons base-form-item">expand_less</span>
+              </div>
+
+              <div class="base-form-body" id="collect-patrimonio-investimentos">
+                <label>Você já possui investimentos?</label>
+                <div class="yes-no-buttons">
+                  <button
+                    type="button"
+                    data-value="true"
+                    data-ocultar-campo="form-investimentos"
+                  >
+                    Sim
+                  </button>
+                  <button
+                    type="button"
+                    data-value="false"
+                    data-ocultar-campo="form-investimentos"
+                  >
+                    Não
+                  </button>
+                </div>
+
+                <div class="hidden" id="form-investimentos">
+                  <div class="horizontal-diviser"></div>
+                  <div class="base-form-body-range">
+                    <div>
+                      <label
+                        >Qual o valor aproximado do seu portfólio atual?</label
+                      >
+                      <input
+                        type="text"
+                        placeholder="R$"
+                        field-format="number"
+                        id="portfolioInvestimentos"
+                      />
+                    </div>
+
+                    <div>
+                      <label
+                        >Você sabe exatamente quanto paga ao seu
+                        Assessor/Gerente?</label
+                      >
+                      <div class="yes-no-buttons">
+                        <button type="button" data-value="true">Sim</button>
+                        <button type="button" data-value="false">Não</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="base-form">
+              <div
+                class="base-form-header"
+                data-toggle-target="collect-patrimonio-outro"
+              >
+                <span class="google-icons base-form-icon">more_horiz</span>
+                <span class="base-form-title">Outro</span>
+                <span class="google-icons base-form-item">expand_less</span>
+              </div>
+
+              <div class="base-form-body" id="collect-patrimonio-outro">
+                <label>Você(s) possue(m) outro ativo?</label>
+                <div class="yes-no-buttons">
+                  <button
+                    type="button"
+                    data-value="true"
+                    data-ocultar-campo="form-otherasset"
+                  >
+                    Sim
+                  </button>
+                  <button
+                    type="button"
+                    data-value="false"
+                    data-ocultar-campo="form-otherasset"
+                  >
+                    Não
+                  </button>
+                </div>
+
+                <div class="hidden" id="form-otherasset">
+                  <button type="button" id="add-otherasset-btn">
+                    + Adicionar Outro
+                  </button>
+                  <div id="otherasset-container"></div>
+                </div>
+              </div>
+            </div>
+
+            <br />
+            <h4>Passivos</h4>
+            <br />
+
+            <div class="base-form">
+              <div class="base-form-header" data-toggle-target="collect-patrimonio-liabilities">
+                <span class="google-icons base-form-icon">paid</span>
+                <span class="base-form-title">Obrigações Financeiras</span>
+                <span class="google-icons base-form-item">expand_less</span>
+              </div>
+
+              <div class="base-form-body" id="collect-patrimonio-liabilities">
+                <label>Você(s) possue(m) algum passivo financeiro?</label>
+                <div class="yes-no-buttons">
+                  <button
+                    type="button"
+                    data-value="true"
+                    data-ocultar-campo="form-liabilities"
+                  >
+                    Sim
+                  </button>
+                  <button
+                    type="button"
+                    data-value="false"
+                    data-ocultar-campo="form-liabilities"
+                  >
+                    Não
+                  </button>
+                </div>
+
+                <div class="hidden" id="form-liabilities">
+                  <button type="button" id="add-liabilities-btn">
+                    + Adicionar Outro
+                  </button>
+                  <div id="liabilities-container"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Coleta de dados: Orçamento -->
+        <section class="step hidden naoImprimir" id="step-7">
+          <div class="section-title">
+            <h4>Coleta de Dados</h4>
+            <nav class="collection-nav">
+              <ul>
+                <li>
+                  <span class="google-icons collection-nav-icons">person</span
+                  >Dados Iniciais
+                </li>
+                <li>
+                  <span class="google-icons collection-nav-icons">shield</span
+                  >Proteções
+                </li>
+                <li>
+                  <span class="google-icons collection-nav-icons"
+                    >account_balance</span
+                  >Patrimônio
+                </li>
+                <li class="active">
+                  <span class="google-icons collection-nav-icons">money</span
+                  >Orçamento
+                </li>
+              </ul>
+            </nav>
+          </div>
+
+          <div class="section-body">
+            <div class="base-form">
+              <div
+                class="base-form-header"
+                data-toggle-target="collect-orcamento-orcamento"
+              >
+                <span class="google-icons base-form-icon">donut_large</span>
+                <span class="base-form-title">Orçamento</span>
+                <span class="google-icons base-form-item">expand_less</span>
+              </div>
+
+              <div class="base-form-body" id="collect-orcamento-orcamento">
+                <div>
+                  <label>Você faz controle de gastos?</label>
+                  <div class="yes-no-buttons" id="orcamentoYesNo">
+                    <button
+                      data-value="true"
+                      data-ocultar-campo="form-controle-gastos"
+                    >
+                      Sim
+                    </button>
+                    <button
+                      data-value="false"
+                      data-ocultar-campo="form-controle-gastos"
+                    >
+                      Não
+                    </button>
+                  </div>
+                </div>
+
+                <div class="hidden" id="form-controle-gastos">
+                  <div class="horizontal-diviser"></div>
+                  <label for="orcamento-controle-gastos-metodo">Como você faz seu controle de gastos?</label>
+                  <select id="orcamento-controle-gastos-metodo" name="orcamento-controle-gastos-metodo">
+                    <option value="" selected disabled>
+                      Selecione uma opção
+                    </option>
+                    <option value="planilha">Planilha</option>
+                    <option value="papel">Papel</option>
+                    <option value="aplicativo">Aplicativo</option>
+                    <option value="outro">Outro</option>
+                  </select>
+                </div>
+
+                <div class="horizontal-diviser"></div>
+
+                <!-- Tabela de Receitas -->
+                <div class="orcamento-table">
+                  <div class="orcamento-table-total">
+                    <span>Receitas</span>
+                    <span id="display-subtotal-receitas">R$ 0,00</span>
+                  </div>
+
+                  <div class="orcamento-table-item">
+                    <span
+                      >Renda
+                      <small>(salário, 13º salário, pró-labore)</small></span
+                    >
+                    <span
+                      ><input
+                        type="text"
+                        id="orcamento-receita-renda"
+                        class="table-input orcamento-receita"
+                        data-key="receita_renda"
+                        placeholder="0,00"
+                        field-format="number"
+                    /></span>
+                  </div>
+                  <div class="orcamento-table-item">
+                    <span>Renda do cônjuge</span>
+                    <span
+                      ><input
+                        type="text"
+                        id="orcamento-receita-renda-conjuge"
+                        class="table-input orcamento-receita"
+                        data-key="receita_renda_conjuge"
+                        placeholder="0,00"
+                        field-format="number"
+                    /></span>
+                  </div>
+                  <div class="orcamento-table-item">
+                    <span
+                      >Outras fontes de renda
+                      <small>(dividendos, aluguel)</small></span
+                    >
+                    <span
+                      ><input
+                        type="text"
+                        id="orcamento-receita-outras"
+                        class="table-input orcamento-receita"
+                        data-key="receita_outras"
+                        placeholder="0,00"
+                        field-format="number"
+                    /></span>
+                  </div>
+                </div>
+
+                <!-- Tabela de Despesas -->
+                <div class="orcamento-table">
+                  <div class="orcamento-table-total">
+                    <span>Despesas</span>
+                    <span id="display-total-despesas">R$ 0,00</span>
+                  </div>
+
+                  <div class="orcamento-table-subtotal">
+                    <span>Necessidades</span>
+                    <span id="display-despesas-fixas">R$ 0,00</span>
+                  </div>
+
+                  <div class="orcamento-table-item">
+                    <span
+                      >Casa
+                      <small>(aluguel, condomínio, energia, água)</small></span
+                    >
+                    <span><input type="text" id="orcamento-despesa-casa" class="table-input orcamento-despesa despesa-fixa" data-key="despesa_casa" placeholder="0,00" field-format="number"/></span>
+                  </div>
+                  <div class="orcamento-table-item">
+                    <span>Alimentação<small>(mercado, açougue, feira)</small></span>
+                    <span><input type="text" id="orcamento-despesa-alimentacao" class="table-input orcamento-despesa despesa-fixa" data-key="despesa_alimentacao" placeholder="0,00" field-format="number"/></span>
+                  </div>
+                  <div class="orcamento-table-item">
+                    <span>Transporte <small>(gasolina, limpeza)</small></span>
+                    <span><input type="text"
+                        id="orcamento-despesa-transporte"
+                        class="table-input orcamento-despesa despesa-fixa"
+                        data-key="despesa_transporte"
+                        placeholder="0,00"
+                        field-format="number"
+                    /></span>
+                  </div>
+                  <div class="orcamento-table-item">
+                    <span
+                      >Educação <small>(escola, faculdade, cursos)</small></span
+                    >
+                    <span
+                      ><input
+                        type="text"
+                        id="orcamento-despesa-educacao"
+                        class="table-input orcamento-despesa despesa-fixa"
+                        data-key="despesa_educacao"
+                        placeholder="0,00"
+                        field-format="number"
+                    /></span>
+                  </div>
+                  <div class="orcamento-table-item">
+                    <span
+                      >Saúde <small>(plano de saúde, medicamentos)</small></span
+                    >
+                    <span
+                      ><input
+                        type="text"
+                        id="orcamento-despesa-saude"
+                        class="table-input orcamento-despesa despesa-fixa"
+                        data-key="despesa_saude"
+                        placeholder="0,00"
+                        field-format="number"
+                    /></span>
+                  </div>
+                  <div class="orcamento-table-item">
+                    <span
+                      >Filhos e família <small>(escola, mesada)</small></span
+                    >
+                    <span
+                      ><input
+                        type="text"
+                        id="orcamento-despesa-filhos-familia"
+                        class="table-input orcamento-despesa despesa-fixa"
+                        data-key="despesa_filhos_familia"
+                        placeholder="0,00"
+                        field-format="number"
+                    /></span>
+                  </div>
+                  <div class="orcamento-table-item">
+                    <span>Pets</span>
+                    <span
+                      ><input
+                        type="text"
+                        id="orcamento-despesa-pets"
+                        class="table-input orcamento-despesa despesa-fixa"
+                        data-key="despesa_pets"
+                        placeholder="0,00"
+                        field-format="number"
+                    /></span>
+                  </div>
+
+                  <div class="orcamento-table-subtotal">
+                    <span>Desejos</span>
+                    <span id="display-despesas-variaveis">R$ 0,00</span>
+                  </div>
+
+                  <div class="orcamento-table-item">
+                    <span>Bar e restaurante</span>
+                    <span
+                      ><input
+                        type="text"
+                        id="orcamento-despesa-bar-restaurante"
+                        class="table-input orcamento-despesa despesa-variavel"
+                        data-key="despesa_bar_restaurante"
+                        placeholder="0,00"
+                        field-format="number"
+                    /></span>
+                  </div>
+                  <div class="orcamento-table-item">
+                    <span>Compras</span>
+                    <span
+                      ><input
+                        type="text"
+                        id="orcamento-despesa-compras"
+                        class="table-input orcamento-despesa despesa-variavel"
+                        data-key="despesa_compras"
+                        placeholder="0,00"
+                        field-format="number"
+                    /></span>
+                  </div>
+                  <div class="orcamento-table-item">
+                    <span>Lazer e entretenimento</span>
+                    <span
+                      ><input
+                        type="text"
+                        id="orcamento-despesa-lazer-entretenimento"
+                        class="table-input orcamento-despesa despesa-variavel"
+                        data-key="despesa_lazer_entretenimento"
+                        placeholder="0,00"
+                        field-format="number"
+                    /></span>
+                  </div>
+                  <div class="orcamento-table-item">
+                    <span>Dívidas</span>
+                    <span
+                      ><input
+                        type="text"
+                        id="orcamento-despesa-dividas"
+                        class="table-input orcamento-despesa despesa-variavel"
+                        data-key="despesa_dividas"
+                        placeholder="0,00"
+                        field-format="number"
+                    /></span>
+                  </div>
+
+                  <div class="orcamento-table-item">
+                    <span>Outras despesas</span>
+                    <span
+                      ><input
+                        type="text"
+                        id="orcamento-despesa-outros"
+                        class="table-input orcamento-despesa despesa-variavel"
+                        data-key="despesa_outros"
+                        placeholder="0,00"
+                        field-format="number"
+                    /></span>
+                  </div>
+                  <div class="orcamento-table-item">
+                    <span>Investimento</span>
+                    <span
+                      ><input
+                        type="text"
+                        id="input-investimentos-total"
+                        class="table-input orcamento-investimento"
+                        data-key="investimentos_total"
+                        placeholder="0,00"
+                        field-format="number"
+                    /></span>
+                  </div>
+                </div>
+
+                <div class="orcamento-table">
+                  <div class="orcamento-table-total">
+                    <span>Fluxo de Caixa</span>
+                    <span id="display-fluxo-caixa">R$ 0,00</span>
+                  </div>
+                </div>
+
+                <!-- Hidden fields to persist computed totals for export/summary -->
+                <input
+                  type="hidden"
+                  id="hidden-total-receitas"
+                  name="totalReceitas"
+                />
+                <input
+                  type="hidden"
+                  id="hidden-total-despesas"
+                  name="totalDespesas"
+                />
+                <input
+                  type="hidden"
+                  id="hidden-fluxo-caixa"
+                  name="fluxoCaixa"
+                />
+                <input
+                  type="hidden"
+                  id="hidden-total-investimentos"
+                  name="totalInvestimentos"
+                />
+              </div>
+            </div>
+
+            <div class="base-form">
+              <div
+                class="base-form-header"
+                data-toggle-target="collect-orcamento-cartao"
+              >
+                <span class="google-icons base-form-icon">credit_card</span>
+                <span class="base-form-title">Cartão</span>
+                <span class="google-icons base-form-item">expand_less</span>
+              </div>
+
+              <div class="base-form-body" id="collect-orcamento-cartao">
+                <label>Você usa cartão de crédito?</label>
+                <div class="yes-no-buttons">
+                  <button data-value="true" data-ocultar-campo="campos-cartao">
+                    Sim
+                  </button>
+                  <button data-value="false" data-ocultar-campo="campos-cartao">
+                    Não
+                  </button>
+                </div>
+
+                <div class="hidden" id="campos-cartao">
+                  <div class="horizontal-diviser"></div>
+                  <div class="base-form-body-range">
+                    <div>
+                      <label for="cartao-quantidade">Quantos cartões você possui atualmente?</label>
+                      <input
+                        type="number"
+                        id="cartao-quantidade"
+                        name="cartao-quantidade"
+                        min="0"
+                        placeholder="Quantidade"
+                      />
+                    </div>
+                    <div>
+                      <label for="cartao-limite-total">Limite total</label>
+                      <input
+                        type="text"
+                        id="cartao-limite-total"
+                        name="cartao-limite-total"
+                        placeholder="R$"
+                        field-format="number"
+                      />
+                    </div>
+                    <div>
+                      <label for="cartao-milhas-cashback">Você contabiliza milhas/cashback?</label>
+                      <div class="yes-no-buttons" id="cartao-milhas-cashback">
+                        <button data-value="true">Sim</button>
+                        <button data-value="false">Não</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Resumo -->
+        <section class="step hidden" id="step-8">
+          <div class="section-title">
+            <h4>Resumo</h4>
+            <p id="resumo-intro">Acompanhe como está sua vida financeira!</p>
+          </div>
+
+          <div class="base-form">
+            <div class="base-form-header" style="cursor: auto !important">
+              <span class="google-icons base-form-icon">summarize</span>
+              <span class="base-form-title">Orçamento</span>
+            </div>
+
+            <div class="base-form-body">
+              <span class="resumo-titulo">Metodologia 50-30-20</span>
+              <div class="base-form-body-range">
+                <div><p>A regra 50-30-20 é um método simples para organizar o orçamento mensal, dividindo a renda líquida em três partes. Metade do dinheiro (50%) vai para necessidades essenciais, como moradia, contas básicas, alimentação e transporte. Uma parte menor (30%) fica para desejos e estilo de vida, como lazer, assinaturas, restaurantes e compras não essenciais. Os 20% restantes são destinados a construir patrimônio: quitação de dívidas, reserva de emergência e investimentos para objetivos de médio e longo prazo.</p></div>
+                <div style="max-height: 250px;"><canvas id="graficoMetodologia503020"></canvas></div>
+              </div>
+              <br><br> 
+              <div class="horizontal-diviser"></div>
+              <br>
+              <span class="resumo-titulo">Orçamento Atual</span>
+              <div class="base-form-body-range">
+                <div style="max-height: 250px;"><canvas id="graficoOrcamentoAtual"></canvas></div>
+                <div id="orcamento-alerta" class="orcamento-alerta"></div>
+              </div>
+
+              <br><br> 
+              <div class="horizontal-diviser"></div>
+              <br>
+              
+              <span class="resumo-titulo">Reserva de Emergência</span>
+              <div class="reserva-emergencia-secao">
+                <div class="reserva-emergencia-card">
+                  <div class="reserva-emergencia-titulo">Reserva mínima<br><span class="reserva-emergencia-sub">3 meses</span></div>
+                  <div class="reserva-emergencia-img"><img src="../imgs/reserva/cofre-medio.png"></div>
+                  <div class="reserva-emergencia-valor" id="reserva-minima-valor">R$ 0,00</div>
+                </div>
+                
+                <div class="reserva-emergencia-card">
+                  <div class="reserva-emergencia-titulo">Reserva recomendada<br><span class="reserva-emergencia-sub">6 meses</span></div>
+                  <div class="reserva-emergencia-img"><img src="../imgs/reserva/cofre-cheio.png"></div>
+                  <div class="reserva-emergencia-valor" id="reserva-recomendada-valor">R$ 0,00</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="base-form">
+            <div class="base-form-header" style="cursor: auto !important">
+              <span class="google-icons base-form-icon">account_balance</span>
+              <span class="base-form-title">Patrimônio</span>
+            </div>
+
+            <div class="base-form-body">
+              <div class="patrimonio-comparativo" style="height: 400px; width: 100%;">
+                <div style="flex:1; min-height:400px; position:relative;">
+                  <span class="resumo-titulo">Patrimônio Total</span>
+                  <canvas id="graficoPatrimonioTotal"></canvas>
+                </div>
+                <div style="flex:1; min-height:400px; position:relative;">
+                  <span class="resumo-titulo">Proteção do patrimônio</span>
+                  <canvas id="graficoPatrimonioProtegido"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="base-form">
+            <div class="base-form-header" style="cursor: auto !important">
+              <span class="google-icons base-form-icon">flag</span>
+              <span class="base-form-title">Objetivos</span>
+            </div>
+
+              <div class="base-form-body">
+              <div id="resumo-objetivos" class="objetivo-grid">
+                <div class="objetivo-card" data-goal="imovel">
+                  <div class="title"><span class="google-icons">apartment</span>Imóveis</div>
+                  <div class="meta">Prazo: <span data-field="date">-</span></div>
+                  <div class="meta">Valor: <span data-field="valor">R$ 0,00</span></div>
+                  <div class="pmt">Investimento mensal: <span data-field="pmt">R$ 0,00</span></div>
+                </div>
+
+                <div class="objetivo-card" data-goal="veiculo">
+                  <div class="title"><span class="google-icons">directions_car</span>Veículos</div>
+                  <div class="meta">Prazo: <span data-field="date">-</span></div>
+                  <div class="meta">Valor: <span data-field="valor">R$ 0,00</span></div>
+                  <div class="pmt">Investimento mensal: <span data-field="pmt">R$ 0,00</span></div>
+                </div>
+
+                <div class="objetivo-card" data-goal="profissional">
+                  <div class="title"><span class="google-icons">work</span>Profissional</div>
+                  <div class="meta">Prazo: <span data-field="date">-</span></div>
+                  <div class="meta">Valor: <span data-field="valor">R$ 0,00</span></div>
+                  <div class="pmt">Investimento mensal: <span data-field="pmt">R$ 0,00</span></div>
+                </div>
+
+                <div class="objetivo-card" data-goal="viagens">
+                  <div class="title"><span class="google-icons">flight</span>Viagens</div>
+                  <div class="meta">Prazo: <span data-field="date">-</span></div>
+                  <div class="meta">Valor: <span data-field="valor">R$ 0,00</span></div>
+                  <div class="pmt">Investimento mensal: <span data-field="pmt">R$ 0,00</span></div>
+                </div>
+
+                <div class="objetivo-card" data-goal="casamento">
+                  <div class="title"><span class="google-icons">favorite</span>Casamento</div>
+                  <div class="meta">Prazo: <span data-field="date">-</span></div>
+                  <div class="meta">Valor: <span data-field="valor">R$ 0,00</span></div>
+                  <div class="pmt">Investimento mensal: <span data-field="pmt">R$ 0,00</span></div>
+                </div>
+
+                <div class="objetivo-card" data-goal="empreender">
+                  <div class="title"><span class="google-icons">lightbulb_2</span>Empreender</div>
+                  <div class="meta">Prazo: <span data-field="date">-</span></div>
+                  <div class="meta">Valor: <span data-field="valor">R$ 0,00</span></div>
+                  <div class="pmt">Investimento mensal: <span data-field="pmt">R$ 0,00</span></div>
+                </div>
+
+                <div class="objetivo-card" data-goal="dividas">
+                  <div class="title"><span class="google-icons">money_off</span>Sanar dívidas</div>
+                  <div class="meta">Prazo: <span data-field="date">-</span></div>
+                  <div class="meta">Valor: <span data-field="valor">R$ 0,00</span></div>
+                  <div class="pmt">Investimento mensal: <span data-field="pmt">R$ 0,00</span></div>
+                </div>
+
+                <div class="objetivo-card" data-goal="outros">
+                  <div class="title"><span class="google-icons">badge</span>Outros</div>
+                  <div class="meta">Prazo: <span data-field="date">-</span></div>
+                  <div class="meta">Valor: <span data-field="valor">R$ 0,00</span></div>
+                  <div class="pmt">Investimento mensal: <span data-field="pmt">R$ 0,00</span></div>
+                </div>
+
+                <div class="objetivo-card resumo" data-goal="resumo">
+                  <div class="title"><span class="google-icons">summarize</span>Resumo</div>
+                  <div class="meta">Taxa real (a.a.): <span data-field="taxa-real">-</span></div>
+                  <div class="meta">Valor Total: <span data-field="total-futuro">R$ 0,00</span></div>
+                  <div class="pmt">Investimento Mensal: <span data-field="total-pmt">R$ 0,00</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="base-form">
+            <div class="base-form-header" style="cursor: auto !important">
+              <span class="google-icons base-form-icon">trending_up</span>
+              <span class="base-form-title">Evolução Patrimonial</span>
+            </div>
+
+            <div class="base-form-body">
+              <div class="projecao-primeiraParte">
+                <div class="projecao-informacoes">
+                  <div class="projecao-informacoes-item">
+                    <div class="projecao-informacoes-titulo">
+                      <span class="google-icons projecao-informacoes-icon">account_balance_wallet</span>
+                      <div class="projecao-informacoes-textos">
+                        <h5>Seu patrimônio em <span data-projecao="tempo"></span> anos será: </h5>
+                        <small>Nesta data você terá <span data-projecao="idadeFinal"></span> anos de idade</small>
+                      </div>
+                    </div>
+                    <div class="projecao-informacoes-valor">
+                      <span data-projecao="patrimonioFinal"></span>
+                    </div>
+                  </div>
+
+                  <div class="projecao-informacoes-item">
+                    <div class="projecao-informacoes-titulo">
+                      <span class="google-icons projecao-informacoes-icon"
+                        >sports_score</span
+                      >
+                      <div class="projecao-informacoes-textos">
+                        <h5>Data do R$ 1 Milhão:</h5>
+                        <small
+                          ><span data-projecao="anosPriMilhao"></span> anos ou
+                          <span data-projecao="mesesPriMilhao"></span>
+                          meses</small
+                        >
+                      </div>
+                    </div>
+                    <div class="projecao-informacoes-valor">
+                      <span data-projecao="dataPriMilhao"></span>
+                    </div>
+                  </div>
+
+                  <div class="projecao-informacoes-item">
+                    <div class="projecao-informacoes-titulo">
+                      <span class="google-icons projecao-informacoes-icon"
+                        >savings</span
+                      >
+                      <div class="projecao-informacoes-textos">
+                        <h5>Capital Inicial + Aportes:</h5>
+                        <small
+                          ><span data-projecao="percentualAportes"></span> de
+                          capital próprio sobre o patrimônio bruto</small
+                        >
+                      </div>
+                    </div>
+                    <div class="projecao-informacoes-valor">
+                      <span data-projecao="valorAportesTotal"></span>
+                    </div>
+                  </div>
+
+                  <div class="projecao-informacoes-item">
+                    <div class="projecao-informacoes-titulo">
+                      <span class="google-icons projecao-informacoes-icon"
+                        >paid</span
+                      >
+                      <div class="projecao-informacoes-textos">
+                        <h5>Juros no período:</h5>
+                        <small
+                          ><span data-projecao="percentualJuros"></span> de
+                          juros sobre o patrimônio bruto</small
+                        >
+                      </div>
+                    </div>
+                    <div class="projecao-informacoes-valor">
+                      <span data-projecao="valorJurosTotal"></span>
+                    </div>
+                  </div>
+
+                  <div
+                    class="projecao-informacoes-item"
+                    style="background-color: var(--second-color); border-color: var(--second-color); color: white;">
+                    <div class="projecao-informacoes-titulo">
+                      <span class="google-icons projecao-informacoes-icon">universal_currency_alt</span>
+                      <div class="projecao-informacoes-textos">
+                        <h5 style="color: white">Renda Passiva Mensal:</h5>
+                        <small style="color: var(--neutral-300)">Valor aproximado</small>
+                      </div>
+                    </div>
+                    <div class="projecao-informacoes-valor">
+                      <span data-projecao="rendaPassivaMensal"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="projecao-segundaParte">
+                <div class="projecao-segundaParte-range">
+                  <div class="projecao-premissas">
+                    <div class="projecao-titulos">
+                      <h4>Premissas Consideradas</h4>
+                    </div>
+                    <p>Levando em consideração a sua idade atual, de <span data-projecao="idadeAtual"></span> anos; considerando como Capital Inicial o valor <span data-projecao="valorCarteira"></span> da sua carteira de investimento já existente; e com expectativa de aportes mensais no valor de <span data-projecao="aporteMensal"></span>, calculamos a evolução patrimonial para um período de aplicação de <span data-projecao="periodoAplicacao"></span> anos.</p>
+                    <p>Leva-se em conta as premissas de taxa média de retorno no valor de <span data-projecao="taxaRetorno"></span> ao ano e inflação média de <span data-projecao="taxaInflacao"></span> para o período projetado.</p>
+                    <p>Além disso, faz-se mister salientar os aspectos fundamentais para a construção do cenário patrimonial, visando a preservação do poder de compra ao longo do tempo:</p>
+                    <ul>
+                      <li>Correção do patrimônio pela inflação: <span data-projecao="correcaoPatrimonio"></span></li>
+                      <li>Correção dos aportes pela inflação: <span data-projecao="correcaoAporte"></span></li>
+                      <li>Crescimento dos aportes: <span data-projecao="crescimentoAportes"></span></li>
+                    </ul>
+                    <p id="premissas-incluirIR">Por fim, considera-se a tributação do Imposto de Renda no valor de <span data-projecao="taxaIR"></span>.</p>
+                  </div>
+
+                  <div class="projecao-composicao">
+                    <div class="projecao-titulos">
+                      <h4>Composição (%)</h4>
+                    </div>
+                    <div class="grafico-composicao-wrapper">
+                      <canvas id="graficoComposicao"></canvas>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="projecao-terceiraParte">
+                <div>
+                  <h4>Evolução Patrimonial (R$ Mil)</h4>
+                  <p style="margin-bottom: 20px">
+                    <span id="subtitle-graficoPlReal-info1"></span> |
+                    <span id="subtitle-graficoPlReal-info2"></span> |
+                    <span id="subtitle-graficoPlReal-info3"></span>
+                  </p>
+                </div>
+
+                <div class="grafico-PlReal-wrapper">
+                  <canvas id="graficoPlReal"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Proposta de trabalho -->
+        <section class="step hidden naoImprimir" id="step-9">
+          <div class="section-title">
+            <h4>Proposta de Trabalho</h4>
+            <p>Investimento para garantia de segurança financeira!</p>
+          </div>
+
+          <div class="section-body">
+            <div class="base-form">
+              <div
+                class="base-form-header"
+                data-toggle-target="proposal-entregaveis"
+              >
+                <span class="google-icons base-form-icon">orders</span>
+                <span class="base-form-title">Entregáveis</span>
+                <span class="google-icons base-form-item">expand_less</span>
+              </div>
+
+              <div class="base-form-body" id="proposal-entregaveis">
+                <p>Principais Entregáveis:</p>
+
+                <div class="grid-entregaveis">
+                  <div id="entregavel-1">
+                    <span class="google-icons">crown</span>
+                    <h4>Orçamento Ideal</h4>
+                    <p>
+                      Descubra seu orçamento ideal para atingir os objetivos
+                      escolhidos.
+                    </p>
+                  </div>
+                  <div id="entregavel-2">
+                    <span class="google-icons">show_chart</span>
+                    <h4>Fluxo Futuro</h4>
+                    <p>
+                      Tenha em mãos, hoje, tudo o que você precisa fazer para
+                      atingir seus objetivos futuros.
+                    </p>
+                  </div>
+                  <div id="entregavel-3">
+                    <span class="google-icons">graph_2</span>
+                    <h4>Asset Allocation</h4>
+                    <p>
+                      Conheça a estratégia de investimentos elaborada para
+                      potencializar seus rendimentos e proteções.
+                    </p>
+                  </div>
+                  <div id="entregavel-4">
+                    <span class="google-icons">beach_access</span>
+                    <h4>Planejamento para Aposentadoria</h4>
+                    <p>
+                      Determine seu patrimônio ideal para aposentadoria e saiba
+                      como alcançar esse objetivo.
+                    </p>
+                  </div>
+                  <div id="entregavel-5">
+                    <span class="google-icons">map</span>
+                    <h4>Estratégia para Expansão Patrimonial</h4>
+                    <p>
+                      Entenda o caminho mais adequado, com base nos seus
+                      objetivos, para expandir seu patrimônio.
+                    </p>
+                  </div>
+                  <div id="entregavel-6">
+                    <span class="google-icons">desktop_windows</span>
+                    <h4>Aplicativo Online</h4>
+                    <p>
+                      Tenha acesso às suas finanças diretamente no computador ou
+                      celular, usando IA e Open Finance.
+                    </p>
+                  </div>
+                </div>
+
+                <p>Demais Entregáveis:</p>
+
+                <div class="grid-entregaveis">
+                  <div id="entregavel-7">
+                    <span class="google-icons">verified_user</span>
+                    <h4>Estudo Personalizado de Proteções</h4>
+                    <p>Descubra qual o seu plano de proteções ideal.</p>
+                  </div>
+
+                  <div id="entregavel-8">
+                    <span class="google-icons">assured_workload</span>
+                    <h4>Propostas e Cotações Inteligentes</h4>
+                    <p>
+                      Receba as cotações para alavancagem com o melhor
+                      custo-benefício para você.
+                    </p>
+                  </div>
+
+                  <div id="entregavel-9">
+                    <span class="google-icons">receipt_long</span>
+                    <h4>Análise de Endividamento</h4>
+                    <p>
+                      Receba uma análise detalhada de como lidar com suas
+                      dívidas.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="base-form">
+              <div
+                class="base-form-header"
+                data-toggle-target="proposal-roteiro"
+              >
+                <span class="google-icons">map</span>
+                <span class="base-form-title">Roteiro de Execução</span>
+                <span class="google-icons base-form-item">expand_less</span>
+              </div>
+
+              <div class="base-form-body" id="proposal-roteiro">
+                <div class="grid-roteiro">
+                  <div id="roteiro-1">
+                    <span class="google-icons">donut_large</span>
+                    <h4>Reunião 1: Planejamento</h4>
+                    <p>
+                      Definição do orçamento e projeção de conquistas. Foco em
+                      reduzir custos ocultos sem interferir no padrão de vida.
+                      Construção de sistema de recompensas por metas atingidas.
+                    </p>
+                  </div>
+                  <div id="roteiro-2">
+                    <span class="google-icons">attach_money</span>
+                    <h4>Reunião 2: Investimentos</h4>
+                    <p>
+                      Elaboração da sua estratégia de investimentos. Além disso,
+                      quando fizer sentido, é o momento de conectar diretamente
+                      à gestora no modelo de Wealth Management.
+                    </p>
+                  </div>
+                  <div id="roteiro-3">
+                    <span class="google-icons">shield</span>
+                    <h4>Reunião 3: Proteções</h4>
+                    <p>
+                      Mapeamento de necessidades de proteção e estratégias
+                      avançadas (portabilidade e eficiência tributária) de
+                      previdência privada.
+                    </p>
+                  </div>
+                </div>
+                <div class="roteiro-lifeplan" id="roteiro-4">
+                  <div>
+                    <span class="google-icons">map</span>
+                    <h4>Financial Life Plan</h4>
+                    <p>
+                      Receba o relatório completo da sua vida financeira atual e
+                      projeções futuras.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="base-form">
+              <div class="base-form-header" data-toggle-target="proposal-investimento">
+                <span class="google-icons base-form-icon">handshake</span>
+                <span class="base-form-title">Investimento</span>
+                <span class="google-icons base-form-item">expand_less</span>
+              </div>
+
+              <div class="base-form-body" id="proposal-investimento">
+                <div class="proposal-investimento-valores base-form-body-range">
+                  <!-- Grupo 12 Meses -->
+                  <div class="proposal-investimento">
+                    <div class="proposal-investimento-title">
+                      <p>Plano</p>
+                      <h4>12 meses</h4>
+                    </div>
+
+                    <div class="proposal-investimento-opcao" onclick="selecionarOpcao(this)">
+                      <div class="card-pagamento">
+                        <div><span class="google-icons icon-card-pagamento">credit_card</span>Cartão de Crédito</div>
+                        <div><span resultado-proposta="valorParcelado12" class="valorProposta">R$ 0,00</span> em 12x</div>
+                      </div>
+                    </div>
+                    <div class="proposal-investimento-opcao" onclick="selecionarOpcao(this)">
+                      <div class="card-pagamento">
+                        <div><span class="google-icons icon-card-pagamento">payments</span>À Vista (PIX ou Boleto)</div>
+                        <div><span resultado-proposta="valorVista12" class="valorProposta" >R$ 0,00</span></div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Grupo N Meses -->
+                  <div class="proposal-investimento">
+                    <div class="proposal-investimento-title">
+                      <p>Plano</p>
+                      <h4 resultado-proposta="labelNMeses">N meses</h4>
+                    </div>
+
+                    <div class="proposal-investimento-opcao" onclick="selecionarOpcao(this)">
+                      <div class="card-pagamento">
+                        <div><span class="google-icons icon-card-pagamento">credit_card</span>Cartão de Crédito</div>
+                        <div><span resultado-proposta="valorParceladoLivre" class="valorProposta">R$ 0,00</span> em <span resultado-proposta="numParcelasLivre">6</span>x</div>
+                      </div>
+                    </div>
+                    <div class="proposal-investimento-opcao" onclick="selecionarOpcao(this)">
+                      <div class="card-pagamento">
+                        <div><span class="google-icons icon-card-pagamento">payments</span>À Vista (PIX ou Boleto)</div>
+                        <div><span resultado-proposta="valorVistaLivre" class="valorProposta">R$ 0,00</span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Tela final -->
+        <section class="step hidden naoImprimir" id="step-10">
+          <div class="tela-final">
+            <div class="agradecimentos-finais">
+              <span class="google-icons">paid</span>
+              <h2>Estudo concluído!</h2>
+              <small
+                >Você finalizou a consultoria e pode baixar o relatório através
+                do botão abaixo.</small
+              ><br />
+              <button onclick="imprimirRelatorio()" style="align-items: center">
+                <span
+                  class="google-icons"
+                  style="
+                    color: white !important;
+                    margin-right: 10px;
+                    font-size: 1.5em;
+                  "
+                  >download</span
+                >Gerar Relatório
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- Configurações -->
+        <section class="hidden naoImprimir" id="main-settings">
+          <div class="section-title">
+            <h4>Configurações</h4>
+          </div>
+
+          <div class="base-form">
+            <div class="base-form-header" style="cursor: auto !important">
+              <span class="google-icons base-form-icon">radio_button_checked</span>
+              <span class="base-form-title">Premissas da projeção financeira</span>
+            </div>
+
+            <div class="base-form-body">
+              <div class="base-form-body-range">
+                <div>
+                  <h4 style="margin-bottom: 10px">Inputs:</h4>
+                  <div class="base-form-body-range">
+                    <div>
+                      <label>Taxa de Retorno</label>
+                      <input type="text" placeholder="(%) a.a." id="inputTaxaRentabilidade" field-format="percent" value="12,00%"/>
+                    </div>
+                    <div>
+                      <label>Inflação</label>
+                      <input type="text" placeholder="(%) a.a." id="inputTaxaInflacao" field-format="percent" value="5,00%"/>
+                    </div>
+                  </div>
+                  <div class="horizontal-diviser"></div>
+                  <div class="base-form-body-range">
+                    <div>
+                      <label>Crescimento Real</label>
+                      <input type="text" placeholder="(%) a.a." id="inputCrescimento" field-format="percent" value="2,00%"/>
+                    </div>
+                    <div>
+                      <label>Imposto de Renda</label>
+                      <input type="text" placeholder="Recomendado usar 15,00%" id="inputTaxaIR" field-format="percent" value="15,00%"/>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="checkbox-premissas-projecao">
+                  <h4 style="margin-bottom: 10px">Configurações Avançadas:</h4>
+                  <label>
+                    <input type="checkbox" id="checkCorrigirInflacao" checked />
+                    <span class="custom-checkbox"></span>
+                    Corrigir Patrimônio pela Inflação
+                  </label>
+                  <label>
+                    <input type="checkbox" id="checkCorrigirAportes" checked />
+                    <span class="custom-checkbox"></span>
+                    Corrigir Aportes
+                  </label>
+                  <label>
+                    <input type="checkbox" id="checkCrescimento" />
+                    <span class="custom-checkbox"></span>
+                    Crescimento Real dos Aportes
+                  </label>
+                  <label>
+                    <input type="checkbox" id="checkIR" checked />
+                    <span class="custom-checkbox"></span>
+                    Incluir IR
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <form id="proposal-settings-form" class="base-form">
+            <div class="base-form-header" style="cursor: auto">
+              <span class="google-icons base-form-icon">border_color</span>
+              <span class="base-form-title">Edição</span>
+            </div>
+
+            <div class="base-form-body">
+              <div class="base-form-body-range">
+                <div>
+                  <label>Percentual da Renda Bruta Anual (%)</label>
+                  <input type="text" id="settings-input-percentual" field-format="percent" value="3,00%" required/>
+                </div>
+                <div>
+                  <label>Valor mínimo da consultoria (R$)</label>
+                  <input type="text" id="settings-input-minimo" field-format="number" value="4200,00" required/>
+                </div>
+                <div>
+                  <label>Quantidade de parcelas</label>
+                  <select id="settings-input-parcelas">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                    <option>11</option>
+                    <option selected>12</option>
+                  </select>
+                </div>
+              </div>
+              <div class="horizontal-diviser"></div>
+              <div class="base-form-body-range">
+                <div>
+                  <label>Meses do plano variável</label>
+                  <input type="number" id="settings-meses-livre" min="1" value="6" />
+                </div>
+                <div>
+                  <label>Taxa adicional</label>
+                  <input type="text" id="settings-input-txadicional" field-format="percent" value="20,00%"/>
+                </div>
+              </div>
+
+              <div class="horizontal-diviser"></div>
+
+              <div class="base-form-body-range">
+                <div>
+                  <label>Receita Anual Bruta (valor de exemplo)</label>
+                  <input type="text" id="receitaAnualBrutaExemplo" field-format="number" value="120.000,00"/>
+                </div>
+              </div>
+            </div>
+          </form>
+
+          <div class="base-form">
+            <div class="base-form-header" style="cursor: auto">
+              <span class="google-icons base-form-icon">search</span>
+              <span class="base-form-title">Prévia</span>
+            </div>
+
+            <div class="base-form-body">
+              <div class="proposal-investimento-valores base-form-body-range">
+                <div class="proposal-investimento">
+                  <div class="proposal-investimento-title">
+                    <p>Plano</p>
+                    <h4>12 meses</h4>
+                  </div>
+                
+                  <div class="proposal-investimento-opcao" onclick="selecionarOpcao(this)">
+                    <div class="card-pagamento">
+                      <div><span class="google-icons icon-card-pagamento">credit_card</span>Cartão de Crédito</div>
+                      <div><span resultado-proposta="previaValorParcelado12" class="valorProposta">R$ 0,00</span> em 12x</div>
+                    </div>
+                  </div>
+                  <div class="proposal-investimento-opcao" onclick="selecionarOpcao(this)">
+                    <div class="card-pagamento">
+                      <div><span class="google-icons icon-card-pagamento">payments</span>À Vista (PIX ou Boleto)</div>
+                      <div><span resultado-proposta="previaValorVista12" class="valorProposta">R$ 0,00</span></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="proposal-investimento">
+                  <div class="proposal-investimento-title">
+                    <p>Plano</p>
+                    <h4 resultado-proposta="previewLabelNMeses">N meses</h4>
+                  </div>
+                  <div class="proposal-investimento-opcao" onclick="selecionarOpcao(this)">
+                    <div class="card-pagamento">
+                      <div><span class="google-icons icon-card-pagamento">credit_card</span>Cartão de Crédito</div>
+                      <div><span resultado-proposta="previaValorParceladoLivre" class="valorProposta">R$ 0,00</span> em <span resultado-proposta="previaNumeroParcelasLivre">6</span>x</div>
+                    </div>
+                  </div>
+                  <div class="proposal-investimento-opcao" onclick="selecionarOpcao(this)">
+                    <div class="card-pagamento">
+                      <div><span class="google-icons icon-card-pagamento">payments</span>À Vista (PIX ou Boleto)</div>
+                      <div><span resultado-proposta="previaValorVistaLivre" class="valorProposta">R$ 0,00</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Templates -->
+        <template id="dependent-template">
+          <div class="rangeFilhoDependente">
+            <div class="horizontal-diviser"></div>
+            <div class="base-form-body-range">
+              <div class="rangeFilhoDependente">
+                <label>Nome completo</label>
+                <input type="text" name="dependente[nome][]" />
+              </div>
+              <div>
+                <label>Data de Nascimento</label>
+                <input type="date" name="dependente[nascimento][]" />
+              </div>
+            </div>
+            <div style="margin-top: 20px">
+              <div>
+                <label>Observações</label>
+                <input type="text" name="dependente[obs][]" placeholder="Alguma observação?"/>
+              </div>
+            </div>
+            <div>
+              <button type="button" class="remove-dependent-btn">Remover</button>
+            </div>
+          </div>
+        </template>
+
+        <template id="property-template">
+          <div class="property-block">
+            <div class="horizontal-diviser"></div>
+            <div class="base-form-body-range">
+              <div>
+                <label for="imovel-valor">Valor estimado (R$)</label>
+                <input type="text" id="imovel-valor" name="imovel[valor][]" placeholder="R$" field-format="number" />
+              </div>
+              <div>
+                <label for="imovel-financiado">É financiado?</label>
+                <div class="yes-no-buttons">
+                  <button type="button" data-value="true">Sim</button>
+                  <button type="button" data-value="false">Não</button>
+                </div>
+              </div>
+            </div>
+            <div class="horizontal-diviser"></div>
+            <div>
+              <label for="imovel-obs">Observações</label>
+              <input type="text" id="imovel-obs" name="imovel[obs][]" placeholder="Alguma observação?"/>
+            </div>
+            <div>
+              <button type="button" class="remove-property-btn">Remover</button>
+            </div>
+          </div>
+        </template>
+
+        <template id="vehicle-template">
+          <div class="vehicle-block">
+            <div class="horizontal-diviser"></div>
+            <div class="base-form-body-range">
+              <div>
+                <label for="veiculo-marca-modelo">Marca e Modelo</label>
+                <input type="text" id="veiculo-marca-modelo" name="veiculo[marca_modelo][]" placeholder="Ex: Toyota Corolla"/>
+              </div>
+              <div>
+                <label for="veiculo-ano-fabricacao">Ano de Fabricação</label>
+                <input type="number" id="veiculo-ano-fabricacao" name="veiculo[ano_fabricacao][]" min="1900" />
+              </div>
+              <div>
+                <label for="veiculo-data-aquisicao">Data de Aquisição</label>
+                <input type="date" id="veiculo-data-aquisicao" name="veiculo[data_aquisicao][]" />
+              </div>
+            </div>
+            <div class="base-form-body-range" style="margin-top: 20px">
+              <div>
+                <label for="veiculo-finalidade">Finalidade de Uso</label>
+                <select id="veiculo-finalidade" name="veiculo[finalidade][]">
+                  <option value="" selected disabled>Selecione uma opção</option>
+                  <option value="pessoal">Pessoal</option>
+                  <option value="comercial">Comercial</option>
+                  <option value="aluguel">Aluguel</option>
+                  <option value="outro">Outro</option>
+                </select>
+              </div>
+              <div>
+                <label for="veiculo-valor-mercado">Valor de Mercado Atual (R$)</label>
+                <input type="text" id="veiculo-valor-mercado" name="veiculo[valor_mercado][]" placeholder="R$" field-format="number" />
+              </div>
+              <div>
+                <label for="veiculo-financiado">Financiado?</label>
+                <div class="yes-no-buttons">
+                  <button type="button" data-value="true">Sim</button>
+                  <button type="button" data-value="false">Não</button>
+                </div>
+              </div>
+            </div>
+            <div style="margin-top: 20px">
+              <label for="veiculo-obs">Observações</label>
+              <input type="text" id="veiculo-obs" name="veiculo[obs][]" placeholder="Alguma observação?"/>
+            </div>
+            <div>
+              <button type="button" class="remove-vehicle-btn">Remover</button>
+            </div>
+          </div>
+        </template>
+
+        <template id="otherasset-template">
+          <div class="otherasset-block">
+            <div class="horizontal-diviser"></div>
+            <div class="base-form-body-range">
+              <div>
+                <label for="otherasset-descricao">Descrição</label>
+                <input type="text" id="otherasset-descricao" name="otherasset[descricao][]" />
+              </div>
+              <div>
+                <label for="otherasset-valor-mercado">Valor de Mercado Atual (R$)</label>
+                <input type="text" id="otherasset-valor-mercado" name="otherasset[valor_mercado][]" placeholder="R$" field-format="number"/>
+              </div>
+            </div>
+            <div style="margin-top: 20px">
+              <label for="otherasset-obs">Observações</label>
+              <input type="text" id="otherasset-obs" name="otherasset[obs][]" placeholder="Alguma observação?"/>
+            </div>
+            <div>
+              <button type="button" class="remove-otherasset-btn">Remover</button>
+            </div>
+          </div>
+        </template>
+
+        <template id="liabilities-template">
+          <div class="liabilities-block">
+            <div class="horizontal-diviser"></div>
+            <div class="base-form-body-range">
+              <div>
+                <label for="liabilities-tipo-credito">Tipo de crédito</label>
+                <select id="liabilities-tipo-credito" name="liabilities[tipo_credito][]">
+                  <option value="" selected disabled>Selecione uma opção</option>
+                  <option>Financiamento Imobiliário</option>
+                  <option>Financiamento Veicular</option>
+                  <option>Consórcio</option>
+                  <option>Cartão de Crédito</option>
+                  <option>Crédito Consignado</option>
+                  <option>Familiar/Amigo</option>
+                  <option>Outro</option>
+                </select>
+              </div>
+              <div>
+                <label for="liabilities-numero-parcelas">Número de Parcelas</label>
+                <input type="number" id="liabilities-numero-parcelas" name="liabilities[numero_parcelas][]" min="1" placeholder="Meses"/>
+              </div>
+              <div>
+                <label for="liabilities-valor-contrato">Valor do Contrato</label>
+                <input type="text" id="liabilities-valor-contrato" name="liabilities[valor_contrato][]" placeholder="R$" field-format="number"/>
+              </div>
+            </div>
+
+            <div class="base-form-body-range" style="margin-top: 20px">
+              <div>
+                <label for="liabilities-saldo-devedor">Saldo Devedor</label>
+                <input type="text" id="liabilities-saldo-devedor" name="liabilities[saldo_devedor][]" placeholder="R$" field-format="number"/>
+              </div>
+              <div>
+                <label for="liabilities-parcelas-pagas">Parcelas Pagas</label>
+                <input type="number" id="liabilities-parcelas-pagas" name="liabilities[parcelas_pagas][]" min="0"/>
+              </div>
+              <div>
+                <label for="liabilities-parcelas-restantes">Parcelas Restantes</label>
+                <input type="number" id="liabilities-parcelas-restantes" name="liabilities[parcelas_restantes][]" min="0"/>
+              </div>
+              <div>
+                <label for="liabilities-taxa-juros">Taxa de Juros (% a.a.)</label>
+                <input type="number" id="liabilities-taxa-juros" name="liabilities[taxa_juros][]" />
+              </div>
+            </div>
+            <div>
+              <button type="button" class="remove-liabilities-btn">Remover</button>
+            </div>
+          </div>
+        </template>
+      </main>
+
+      <div class="step-button-background">
+        <div class="step-buttons">
+          <button id="btn-prev" class="step-button-prev">Voltar</button>
+          <button id="btn-next" class="step-button-next">Continuar</button>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <script type="module" src="scripts/main.js"></script>
+</html>
